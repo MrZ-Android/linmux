@@ -1,0 +1,128 @@
+#!/bin/bash
+clear
+printf """\033[1m
+    __     ____ __  __ __  ___ __  ____  __
+   / /    /  _// | / //  |/  // / / /| |/ /
+  / /     / / /  |/ // /|_/ // / / / |   /
+ / /___ _/ / / /|  // /  / // /_/ / /   |
+/_____/\___//_/ |_//_/  /_/ \____/ /_/|_| \n"""
+tput cup 6 15
+printf "\033[41m\033[37mI AM MR.Z3R0\033[0m\n"
+printf "____________________________________________\n"
+printf "[!] Install Linux On Termux Without \033[31mRoot\033[37m\033[0m\n"
+printf "[!] Choose Your Linux Distro You Want \n    To Install\n"
+sleep 1 && printf "\n"
+printf "01. Ubuntu	   06. Fedora\n"
+printf "02. Debian	   07. CentOS\n"
+printf "03. Kali	   08. OpenSUSE Leap\n"
+printf "04. Kali Nethunter 09. OpenSUSE Tumbleweed\n"
+printf "05. BackBox	   10. Alpine\n\n"
+read -p ">>>> " lnx;
+
+   case $lnx in
+   1 | 01 )
+		wget -q --spider http://google.com
+		if [ $? -eq 0 ]; then
+			printf "Installing Ubuntu...\n"
+			sleep 2 && pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh && bash ubuntu.sh
+			exit
+		else
+			printf "\a\033[31mNo Connection !\033[0m\n"
+		fi
+     	;;
+   2 | 02 )
+		wget -q --spider http://google.com
+		if [ $? -eq 0 ]; then
+			printf "Installing Debian...\n"
+			sleep 2 && pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Debian/debian.sh && bash debian.sh
+			exit
+		else
+			printf "\a\033[31mNo Connection !\033[0m\n"
+		fi
+     	;;
+   3 | 03 )
+		wget -q --spider http://google.com
+		if [ $? -eq 0 ]; then
+			printf "Installing Kali...\n"
+			sleep 2 && pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Kali/kali.sh && bash kali.sh
+			exit
+		else
+			printf "\a\033[31mNo Connection !\033[0m\n"
+		fi
+     	;;
+   4 | 04 )
+		wget -q --spider http://google.com
+		if [ $? -eq 0 ]; then
+			printf "Installing Kali Nethunter...\n"
+			sleep 2 && pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Nethunter/nethunter.sh && bash nethunter.sh
+			exit
+		else
+			printf "\a\033[31mNo Connection !\n\033[0m"
+		fi
+        ;;
+   5 | 05 )
+		wget -q --spider http://google.com
+		if [ $? -eq 0 ]; then
+			printf "Installing BackBox...\n"
+			sleep 2 && pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/BackBox/backbox.sh && bash backbox.sh
+			exit
+		else
+			printf "\033[31m\aNo Connection !\033[0m\n"
+		fi
+     	;;
+   6 | 06 )
+		wget -q --spider http://google.com
+		if [ $? -eq 0 ]; then
+			printf "Installing Fedora...\n"
+			sleep 2 && pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Fedora/fedora.sh && bash fedora.sh
+			exit
+		else
+			printf "\a\033[31mNo Connection !\033[0m\n"
+		fi
+     	;;
+   7 | 07 )
+		wget -q --spider http://google.com
+		if [ $? -eq 0 ]; then
+			printf "Installing CentOS...\n"
+			sleep 2 && pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/CentOS/centos.sh && bash centos.sh
+			exit
+		else
+			printf "\a\033[31mNo Connection !\033[0m\n"
+		fi
+     	;;
+   8 | 08 )
+		wget -q --spider http://google.com
+		if [ $? -eq 0 ]; then
+			printf "Installing OpenSUSE Leap...\n"
+			sleep 2 && pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/openSUSE/Leap/opensuse-leap.sh && bash opensuse-leap.sh
+			exit
+		else
+			printf "\a\033[31mNo Connection !\033[0m\n"
+		fi
+     	;;
+   9 | 09 )
+		wget -q --spider http://google.com
+		if [ $? -eq 0 ]; then
+			printf "Installing OpenSUSE Tmbleweed...\n"
+			sleep 2 && pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/openSUSE/Tumbleweed/opensuse-tumbleweed.sh && bash opensuse-tumbleweed.sh
+			exit
+		else
+			printf "\a\033[31mNo Connection !\033[0m\n"
+		fi
+     	;;
+   10 )
+		wget -q --spider http://google.com
+		if [ $? -eq 0 ]; then
+			printf "Installing Alpine...\n"
+			sleep 2 && pkg install wget openssl-tool proot tar -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Alpine/alpine.sh && bash alpine.sh
+			exit
+		else
+			printf "\a\033[31mNo Connection !\033[0m\n"
+		fi
+     	;;
+   * )
+		printf "\a\033[31mWrong Input...!!\033[0m\n"
+		sleep 2 && bash linmux
+     	;;
+   esac
+
